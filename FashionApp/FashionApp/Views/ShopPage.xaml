@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             mc:Ignorable="d"
+             x:Class="FashionApp.Views.ShopPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Напишето решението" FontSize="Medium" HorizontalOptions="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="verdana.ttf#verdana" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Entry x:Name="TBMathProblem" TextChanged="TBMathProblem_TextChanged"/>
+            <Button Text="Реши" x:Name="MathSolve" Clicked="MathSolve_Clicked"/>
+            <forms:AnimationView
+                x:Name="AnimationView1" 
+                Animation="just.json" 
+        HeightRequest="300" WidthRequest="300"
+                AutoPlay="True" Loop="true"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand" />
+                
+                
+                
+           
+            <Label Text="Намираме обиколката чрез следната формула:" FontSize="Medium" HorizontalOptions="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="verdana.ttf#verdana" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <Grid x:Name="GridTomath"/>
+
+            <Label Text="Подвеждаме под общ знаменател, ако е нужно:" FontSize="Medium" HorizontalOptions="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="verdana.ttf#verdana" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <Grid x:Name="GridP2"/>
+
+            <Label Text="Намираме лицето чрез Херонова Формула:" FontSize="Medium" HorizontalOptions="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="verdana.ttf#verdana" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <Grid x:Name="SReshenie"/>
+            <Label Text="Заместваме страните на триъгълника:" FontSize="Medium" HorizontalOptions="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="verdana.ttf#verdana" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Grid x:Name="Sreshenie2"/>
+            <Label Text="Опростяваме корена:" x:Name="lblOprastqvaneNaKornena" FontSize="Medium" HorizontalOptions="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="verdana.ttf#verdana" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Grid x:Name="OprostenoLice"/>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
